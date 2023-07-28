@@ -2,19 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Contact = ({ props, deleteContact }) => {
-  // console.log(props);
-
-  // let render = props;
-  // if (visible) {
-  //   render = visible;
-  // } else {
-  //   render = props;
-  // }
-  // const deleteContact = id => {
-  //   render = render.filter(el => el.id !== id);
-  //   console.log(render);
-  // };
-  // console.log(render);
   return props.map(({ name, id }) => {
     return (
       <div key={id}>
