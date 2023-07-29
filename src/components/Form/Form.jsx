@@ -18,8 +18,22 @@ const Form = function ({ addContact }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form
+      style={{
+        width: '330px',
+        height: '230px',
+        outline: '1px solid teal',
+        padding: '30px',
+      }}
+      onSubmit={handleSubmit}
+    >
+      <label
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '300px',
+        }}
+      >
         Name
         <input
           onChange={handleChange}
@@ -31,7 +45,14 @@ const Form = function ({ addContact }) {
           required
         />
       </label>
-      <label>
+      <label
+        style={{
+          // height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          width: '300px',
+        }}
+      >
         Number
         <input
           onChange={handleChange}

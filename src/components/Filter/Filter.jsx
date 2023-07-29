@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 const Filter = ({ filterContact, stateFilter }) => {
   return (
-    <label>
+    <label
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        width: '300px',
+      }}
+    >
       Search
       <input
         onChange={filterContact}

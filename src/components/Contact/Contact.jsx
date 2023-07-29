@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ContactsDiv, Button } from './Contacts.styled';
 
 const Contact = ({ props, deleteContact }) => {
   return props.map(({ name, id }) => {
     return (
-      <div key={id}>
+      <ContactsDiv key={id}>
         <h2>{name}</h2>
-        <button type="button" onClick={() => deleteContact(id)}>
+        <Button type="button" onClick={() => deleteContact(id)}>
           Delete
-        </button>
-      </div>
+        </Button>
+      </ContactsDiv>
     );
   });
 };

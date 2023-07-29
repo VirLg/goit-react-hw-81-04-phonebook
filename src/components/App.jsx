@@ -21,10 +21,15 @@ const App = function () {
   };
   const filterContact = e => setFilter(e.target.value);
 
-  const deleteContact = id =>
-    setContacts(prev => prev.contacts.filter(el => el.id !== id));
+  const deleteContact = id => {
+    setContacts(prev => {
+      console.log('id', prev);
+      contacts.filter(el => el.id !== id);
+    });
+  };
 
-  const visible = contacts.filter(el => el.name.includes(filter));
+  const visible =
+    contacts !== [] && contacts.filter(el => el.name.includes(filter));
 
   return (
     <div
