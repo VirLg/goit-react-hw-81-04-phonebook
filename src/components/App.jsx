@@ -31,15 +31,14 @@ const App = function () {
       style={{
         height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection: 'column',
         fontSize: 40,
         color: '#010101',
       }}
     >
-      <Contact props={visible} deleteContact={deleteContact} />
       <Form addContact={addContact} />
       <Filter filterContact={filterContact} stateFilter={filter} />
+      <Contact props={visible} deleteContact={deleteContact} />
     </div>
   );
 };
