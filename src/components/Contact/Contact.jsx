@@ -24,3 +24,7 @@ const Contact = ({ props, deleteContact }) => {
 Contact.propTypes = {};
 
 export default Contact;
+Contact.propTypes = {
+  deleteContact: PropTypes.func.isRequired,
+  props: PropTypes.array,
+};

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
 const Form = function ({ addContact }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -69,6 +68,8 @@ const Form = function ({ addContact }) {
   );
 };
 
-Form.propTypes = {};
+Form.propTypes = {
+  addContact: PropTypes.func.isRequired,
+};
 
 export default Form;

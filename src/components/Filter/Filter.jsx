@@ -28,3 +28,7 @@ const Filter = ({ filterContact, stateFilter }) => {
 // Filter.propTypes = {};
 
 export default Filter;
+Filter.propTypes = {
+  filterContact: PropTypes.func.isRequired,
+  stateFilter: PropTypes.string,
+};
