@@ -22,10 +22,7 @@ const App = function () {
   const filterContact = e => setFilter(e.target.value);
 
   const deleteContact = id => {
-    setContacts(prev => {
-      console.log('id', prev);
-      contacts.filter(el => el.id !== id);
-    });
+    setContacts(contacts.filter(el => el.id !== id));
   };
 
   const visible =
