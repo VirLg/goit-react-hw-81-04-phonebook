@@ -12,18 +12,11 @@ const App = function () {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    if (localStorage.contacts === []) {
-      setContacts([]);
-    }
+    if (localStorage.contacts === []) setContacts([]);
+
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  // useEffect(() => {
-  //   console.log('localStorage.contacts', localStorage.contacts);
-  //   if (localStorage.contacts === []) return;
-  //   console.log('first', 111);
-  //   // setContacts(JSON.parse(localStorage.getItem('contacts')));
-  // }, []);
   //*****************use */
   const addContact = props => {
     const { name, number } = props;
