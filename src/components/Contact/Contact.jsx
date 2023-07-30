@@ -6,7 +6,13 @@ const Contact = ({ props, deleteContact }) => {
   return props.map(({ name, id }) => {
     return (
       <ContactsDiv key={id}>
-        <h2>{name}</h2>
+        <h2
+          style={{
+            fontSize: '20px',
+          }}
+        >
+          {name}
+        </h2>
         <Button type="button" onClick={() => deleteContact(id)}>
           Delete
         </Button>

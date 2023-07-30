@@ -8,6 +8,7 @@ const Filter = ({ filterContact, stateFilter }) => {
         display: 'flex',
         flexDirection: 'column',
         width: '300px',
+        padding: '30px',
       }}
     >
       Search
