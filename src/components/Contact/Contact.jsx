@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ContactsDiv, Button } from './Contacts.styled';
 
 const Contact = ({ props, deleteContact }) => {
-  return props.map(({ name, id }) => {
+  return props.map(({ number, name, id }) => {
     return (
       <ContactsDiv key={id}>
         <h2
@@ -12,6 +12,14 @@ const Contact = ({ props, deleteContact }) => {
           }}
         >
           {name}
+        </h2>
+        <h2
+          style={{
+            fontSize: '20px',
+            marginLeft: '20px',
+          }}
+        >
+          {number}
         </h2>
         <Button type="button" onClick={() => deleteContact(id)}>
           Delete

@@ -21,7 +21,9 @@ const App = function () {
   const addContact = props => {
     const { name, number } = props;
     if (contacts) {
-      const check = contacts.find(el => el.name === name);
+      const check = contacts.find(
+        el => el.name.toLowerCase() === name.toLowerCase()
+      );
       if (check) return alert('NoNoNo');
       setContacts(prev => [{ name, number, id: nanoid() }, ...prev]);
     }
